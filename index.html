@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Plante</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+    <!-- Favicon -->
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <!-- <link href="lib/animate/animate.min.css" rel="stylesheet"> -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Parralaxx -->
+    <link rel="stylesheet" href="./css/parallax.css">
+    <link rel="stylesheet" href="./css/whatwedo.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/swiper.css">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <!-- <div class="container-fluid bg-dark text-light px-0 py-2">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <span class="fa fa-phone-alt me-2"></span>
+                    <span>+971 58 648 6800</span>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <span class="far fa-envelope me-2"></span>
+                    <span>hola@planteuae.com</span>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center mx-n2">
+                    <span>Follow Us:</span>
+                    <a class="btn btn-link text-light" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link text-light" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-link text-light" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-link text-light" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img class="m-0 header-logo" src="./img/icon/Plante Logo.png" alt="Logo">
+        </a>
+        <!-- <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <input id="checkbox" type="checkbox" class="navbar-toggler me-4" data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse">
+        <label class="toggle me-4" for="checkbox">
+            <div id="bar1" class="bars"></div>
+            <div id="bar2" class="bars"></div>
+            <div id="bar3" class="bars"></div>
+        </label>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="./about.html" class="nav-item nav-link">About</a>
+                <!-- <a href="#whatwedo" class="nav-item nav-link">What we do</a> -->
+                <a href="./gallery.html" class="nav-item nav-link">Gallery</a>
+
+                <a onclick="waLink('I just saw your webpage. And I would like to know more about your products and services.')" class="nav-item nav-link contact"><span>Contact</span></a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+<!-- <a style="transform: scale(0);" class="floating-button" onclick="waLink('I just saw your webpage. And I would like to know more about your products and services.')"> <svg xmlns="http://www.w3.org/2000/svg" width="29" height="31" viewBox="0 0 29 31" fill="none">
+    <g clip-path="url(#clip0_75_3)">
+    <path d="M13.7968 0.517349C6.13794 0.894596 0.0940201 7.4929 0.117254 15.4248C0.124329 17.8407 0.68812 20.121 1.68268 22.1358L0.155677 29.8036C0.0730747 30.2184 0.434695 30.5816 0.833004 30.484L8.09613 28.7039C9.96214 29.6654 12.0581 30.2208 14.2763 30.2558C22.1044 30.3795 28.6316 23.9495 28.8756 15.8545C29.1372 7.17714 22.2142 0.102651 13.7968 0.517349ZM22.4633 23.6167C20.3362 25.8171 17.5081 27.0289 14.5 27.0289C12.7387 27.0289 11.0523 26.6201 9.48775 25.8139L8.47627 25.2926L4.02322 26.3841L4.96056 21.677L4.46224 20.6675C3.65002 19.0219 3.23819 17.2425 3.23819 15.3788C3.23819 12.2669 4.4096 9.34132 6.53667 7.14083C8.64473 4.96008 11.519 3.72854 14.5002 3.72854C17.5083 3.72861 20.3363 4.94042 22.4633 7.14076C24.5904 9.34117 25.7618 12.2667 25.7619 15.3786C25.7618 18.4627 24.5713 21.436 22.4633 23.6167Z" fill="#ffffff"/>
+    <path d="M21.48 18.6054L18.694 17.7779C18.3277 17.6691 17.9333 17.7766 17.6664 18.0579L16.9852 18.7759C16.6979 19.0787 16.262 19.176 15.8818 19.0169C14.5639 18.4651 11.7916 15.9152 11.0836 14.6398C10.8794 14.2719 10.9131 13.8119 11.1639 13.4762L11.7587 12.6801C11.9918 12.3683 12.0409 11.9494 11.8868 11.5889L10.7147 8.84648C10.434 8.18963 9.62257 7.99842 9.09249 8.4622C8.31494 9.14251 7.39238 10.1763 7.28023 11.3216C7.0825 13.3409 7.91962 15.8863 11.0852 18.9427C14.7423 22.4738 17.6709 22.9403 19.5777 22.4624C20.6593 22.1914 21.5236 21.1051 22.0691 20.2155C22.4409 19.6091 22.1473 18.8036 21.48 18.6054Z" fill="#ffffff"/>
+    </g>
+    <defs>
+    <clipPath id="clip0_75_3">
+    <rect width="29" height="30" fill="white" transform="translate(0 0.5)"/>
+    </clipPath>
+    </defs>
+    </svg></a> -->
+
+    <!-- Carousel Start -->
+    <div class="gallery-container">
+
+        <div class="swiper mySwiper">
+
+            <div class="swiper-wrapper" id="swiper-content">
+                <!-- <div class="swiper-slide">Slide 1</div> -->
+
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Banner Start -->
+    <!-- <div class="banner container-fluid py-0 pt-lg-0">
+
+        <div>
+            <h4>Set Your Plant <br> abode with us <span><img src="./img/icon/pill.jpg" alt=""></span></h4>
+            <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Dolorem exercitationem minima nostrum!</p>
+        
+            <div class="hero-button-float" >
+                <div class="hero-button-wrapper" style="position: relative;" >
+                  <button style="z-index: 9999 !important; margin: 2rem;" class="btn btn-white btn-talk " data-toggle="modal" data-target="#contactModal"><i class="bi bi-chat-left-dots-fill"></i><span style="position: absolute;top: 6px;left: 36px;" >Let's talk!</span></button>
+                </div>
+              </div>
+        </div>
+        <div>
+            <img src="./img/indoor_plants/img6.png" alt="">
+        </div>
+        <div>
+            <img src="./img/indoor_plants/banner-bg.png" alt="">
+        </div>
+      
+    </div> -->
+    <!-- Banner End -->
+    <div class="postbanner">
+        <div class="content">
+            <h3>One step to a greener, more beautiful world!</h3>
+            <div>
+                <p>Welcome to Plante, where we empower all people to be plant people. We offer a wide range of unique
+                    and finest indoor plants, terrariums and moss walls ensuring there's something for every space and
+                    taste.Whether it's your cosy home, bustling workplace, shopping malls or any other place, Plante is
+                    here to add a touch of green and make it more alive.</p>
+                <p>
+                    At Plante, we're more than just a plant shop; Through our commitment to quality, sustainability, and
+                    personalised service, we make sure that your green journey is a delightful and effortless
+                    experience. Join us at Plante, explore our collection and turn your space into a miniature
+                    ecosystem.
+                    
+                </p>
+            </div>
+            <a id="learnmore" href="./about.html">Learn More about Us</a>
+            <!-- <div class="container py-4 pt-lg-0">
+                <div class="row gx-0 features">
+                    <div class="col-lg-4" data-wow-delay="0.1s">
+                        <div class="bg-white shadow d-flex align-items-center h-100 px-2" style="min-height: 160px;">
+                            <div class="d-flex flex-d-change">
+                           
+                                <div class="ps-3">
+                                    <h5>Handpicked Selection</h5>
+                                    <span>
+                                        Diverse indoor plants, terrariums, and moss walls.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="bg-white shadow d-flex align-items-center h-100 px-2" style="min-height: 160px;">
+                            <div class="d-flex flex-d-change">
+                              
+                                <div class="ps-3">
+                                    <h5>Customization</h5>
+                                    <span>Customize to match your unique style and space.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="bg-white shadow d-flex align-items-center h-100 px-2" style="min-height: 160px;">
+                            <div class="d-flex flex-d-change">
+                              
+                                <div class="ps-3">
+                                    <h5>Educational Resources</h5>
+                                    <span>We offer educational resources for confident plant enthusiasts.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="whatwedo container-xxl py-5">
+                <div class="container">
+                    <div class="whatwedo-row">
+                        <div>
+                            <div class="whatwedo-item">
+                                <!-- <div><img src="./img/works1.png" alt=""></div> -->
+                                <div> <h3>TERRARRIUM </h3>
+                                    <p>Miniature worlds, endless wonders
+                                        </p></div>
+                            </div>
+                            <div class="whatwedo-item">
+                                <!-- <div><img src="./img/works1.png" alt=""></div> -->
+                                <div> <h3>CORPORATE GIFT </h3>
+                                    <p>Green gifts for a brighter future
+                                        </p></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="whatwedo-item">
+                                <!-- <div><img src="./img/works1.png" alt=""></div> -->
+                                <div> <h3>MOSS WALL </h3>
+                                    <p>Nature on your walls
+                                        </p></div>
+                            </div>
+                            <div class="whatwedo-item">
+                                <!-- <div><img src="./img/works1.png" alt=""></div> -->
+                                <div> <h3>LANDSCAPING </h3>
+                                    <p>Art with earth
+                                        </p></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="whatwedo-row">
+                        <div>
+                            <div class="whatwedo-item">
+                                <!-- <div><img src="./img/works1.png" alt=""></div> -->
+                                <div> <h3>COFFEE TABLE </h3>
+                                    <p>Miniature green delight
+                                        </p></div>
+                            </div>
+                            <div class="whatwedo-item">
+                                <!-- <div><img src="./img/works1.png" alt=""></div> -->
+                                <div> <h3>Customise Terrarium</h3>
+                                    <p>Nature in a glass: Your vision, our creation
+                                        </p></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="whatwedo-item">
+                                <!-- <div><img src="./img/works1.png" alt=""></div> -->
+                                <div> <h3>INDOOR PLANTS </h3>
+                                    <p>Greening indoors
+                                        </p></div>
+                            </div>
+                            <div class="whatwedo-item">
+                                <!-- <div><img src="./img/works1.png" alt=""></div> -->
+                                <div> <h3>MAINTENANCE </h3>
+                                    <p>Caring for beauty
+                                        </p></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="whatwedo-row">
+                        <div>
+                            <div class="whatwedo-item">
+                                <!-- <div><img src="./img/works1.png" alt=""></div> -->
+                                <div> <h3>OUTDOOR PLANTS</h3>
+                                    <p>Blossoming outside
+                                        </p></div>
+                            </div>
+                            <div class="whatwedo-item">
+                                <!-- <div><img src="./img/works1.png" alt=""></div> -->
+                                <div> <h3>VERTICAL GARDENS</h3>
+                                    <p>Green on the rise
+                                        </p></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="whatwedo-item">
+                                <!-- <div><img src="./img/works1.png" alt=""></div> -->
+                                <div> <h3>ARTIFICIAL PLANTS</h3>
+                                    <p>Timeless, zero care
+                                        </p></div>
+                            </div>
+                            <div class="whatwedo-item">
+                                <!-- <div><img src="./img/works1.png" alt=""></div> -->
+                                <div> <h3>GARDENINGTOOLS </h3>
+                                    <p>Tools for every thumb
+                                        </p></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .garden {
+            width: 68%;
+            padding: 0 2rem;
+        }
+
+        @media (max-width:768px) {
+            .garden {
+                width: 100% !important;
+            }
+        }
+    </style>
+    <!-- Top Feature Start -->
+    <!-- <div class="container-fluid top-feature py-5 pt-lg-0" style="position: relative;">
+      
+        <div class="container py-5 pt-lg-0">
+            <div class="row gx-0 features">
+                <div class="col-lg-4" data-wow-delay="0.1s">
+                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                                <i class="fa fa-check text-primary" aria-hidden="true"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h4>Handpicked Selection</h4>
+                                <span>
+                                    Diverse indoor plants, terrariums, and moss walls.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                                <i class="fa fa-star text-primary" aria-hidden="true"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h4>Customization</h4>
+                                <span>Customize to match your unique style and space.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                                <i class="fa fa-file text-primary"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h4>Educational Resources</h4>
+                                <span>We offer educational resources for confident plant enthusiasts.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Top Feature End -->
+    <div class="about px-5">
+        <div class="image">
+            <img class="img-fluid rounded" data-wow-delay="0.1s" src="img/Outdoor@3x.png">
+        </div>
+        <div class="content">
+
+            <h1 class="display-5 mb-4">Let's Green It Up</h1>
+            <p class="mb-4 font-17">Explore the finest indoor plants,terrariums, and moss walls from our diverse collection at
+                Plante. Whether you're decorating your home or spicing up your workplace,Plante is here to help you add
+                a breath of fresh air and the beauty of nature to your space. </p>
+            <a class="btn btn-primary py-3 px-4" href="">Explore Now</a>
+        </div>
+    </div>
+    <!-- Facts Start -->
+  
+    <div class="facts my-5 py-5" data-parallax="scroll" data-image-src="img/banner/1.jpg" >
+        <div class="container py-4">
+            <div class="row g-5">
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                    <h1 style="display: inline;" class="display-4 text-white" data-toggle="counter-up">10000<h4>+</h4></h1><br>
+                    <span class="fs-5 fw-semi-bold text-light">Happy Clients</span>
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                    <h1 style="display: inline;" class="display-4 text-white" data-toggle="counter-up">1526</h1><br>
+                    <span class="fs-5 fw-semi-bold text-light">Reviews</span>
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                    <h1 style="display: inline;" class="display-4 text-white" data-toggle="counter-up">4.9</h1><br>
+                    <span class="fs-5 fw-semi-bold text-light">Stars</span>
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                    <h1 style="display: inline;" class="display-4 text-white" data-toggle="counter-up">1200<h4>+</h4></h1><br>
+                    <span class="fs-5 fw-semi-bold text-light">Plante Completed</span>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+    <!-- Features Start -->
+    <div class="container-xxl py-4">
+        <div class="whyplante-container">
+            <!-- col-lg-6 -->
+            <div class="align-items-center whyplante">
+                <div class=" ">
+                    <p class="fs-5 fw-bold text-primary">Why Plante ?</p>
+                    <h1 class="display-5 mb-4">Few Reasons Why People Choosing Us!</h1>
+                    <p class="mb-4 font-17" style="font-size: 22px;" >We have a team of plant enthusiasts who will assist you in making the right picks
+                        for your space. Whether you're a seasoned plant parent or a newbie, from care tips to the latest
+                        trend our team will equip you with all relevant information.
+                    </p>
+                    <a class="btn btn-primary py-3 px-4 mb-4" href="">Explore More</a>
+                </div>
+                <div class="mb-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="gallery">
+                            <img src="./img/whyplante/11.jpg" alt="a hot air balloon">
+                            <img src="./img/whyplante/17.jpg" alt="a sky photo of an old city">
+                            <img src="./img/whyplante/6.jpg" alt="a small boat">
+                            <img src="./img/whyplante/21.jpg" alt="a forest">
+                          </div>
+                       <!-- <div class="image">
+                        <img src="./img/fewreason.jpg" alt="">
+                       </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+    <!-- Best works Start -->
+    <div class="benefits container-xxl py-5">
+        <div class="container">
+            <div>
+                <h3>Wide Variety of Premium Products</h3>
+                <p>Explore a world of options from our collection allowing you to choose the one that best compliments
+                    your decor. From air-purifying snake plants to serene peace lilies, and from open-close terrariums
+                    to geometric designs, we offer a broad selection to meet individual preferences.Our moss walls also
+                    come in various styles and designs, Whether you prefer a minimalist look or a lush, vibrant display,
+                    we have the perfect pick for you.</p>
+            </div>
+            <div>
+                <img src="./img/works1.png" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <h3>Quality Assurance</h3>
+                <p>At Plante we take pride in delivering top-quality products. Each item is handpicked, individually
+                    taken care of, and delivered in the healthiest condition, guaranteeing a lasting and beautiful value
+                    addition to your space</p>
+            </div>
+            <div>
+                <img src="./img/works2.png" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <h3>Affordability</h3>
+                <p>Green that breathes life and beauty into your surroundings doesn't have to come with a high price
+                    tag. We offer a diverse range of products at various price points, from affordable options to
+                    high-end selections, making sure that you can find the perfect addition in budget. Our range spans
+                    from affordable options to high-end selections, ensuring there's something for everyone.</p>
+            </div>
+            <div>
+                <img src="./img/works3.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Best works End -->
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5" id="whatwedo">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="fs-5 fw-bold text-primary">What We Do</p>
+                <h1 class="display-5 mb-2">Services That We Offer For You</h1>
+            </div>
+           
+            <div class="row g-4 parrallax">
+                <div id="app" class="container">
+                    <card data-image="./img/terrarium/tera2.jpg">
+                        <h1 slot="header">Terrarium</h1>
+                        <p slot="content">Your own tiny little jungle! This miniature ecosystem is not just mesmerizing
+                            and easy to maintain but also a fascinating way to bring nature's charm to your space</p>
+                    </card>
+                    <card data-image="./img/moss_wall/moss_wall2.jpg">
+                        <h1 slot="header">Moss Wall</h1>
+                        <p slot="content">Be creative with your decor and bring in a biophilic appeal with the living
+                            art. Moss walls are eco-friendly, visually stunning, and purifies your air. Add the texture
+                            of nature in any place with zero plant maintenance</p>
+                    </card>
+                    <card data-image="./img/indoor_plants/img2.jpg">
+                        <h1 slot="header">Indoor Plants</h1>
+                        <p slot="content">Your little green companions, who can add so much life and colour.They're not
+                            just aesthetically pleasing, but also nature's mood boosters, stress relievers, and air
+                            purifiers making a healthier & happier you</p>
+                    </card>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+    <!-- Mini Gallery Start -->
+    <div class="mini-gallery">
+        <div>
+            <div style="border-radius: 40px 0px;width:29.4%;">
+                <img src="./img/mini-gallery/1.png" alt="">
+            </div>
+            <div style="border-radius: 0px 40px;">
+                <img src="./img/mini-gallery/2.png" alt="">
+            </div>
+            <div style="border-radius: 0px 40px;">
+                <img src="./img/mini-gallery/3.png" alt="">
+            </div>
+            <div style="border-radius: 0px 40px;">
+                <img src="./img/mini-gallery/4.png" alt="">
+            </div>
+            <div style="border-radius: 40px 40px 40px 0px;">
+                <img src="./img/mini-gallery/5.png" alt="">
+            </div>
+        </div>
+        <div>
+            <div style="border-radius: 0px 40px;">
+                <img src="./img/mini-gallery/6.png" alt="">
+            </div>
+            <div style="border-radius: 40px 0px;">
+                <img src="./img/mini-gallery/7.png" alt="">
+            </div>
+            <div style="width: 29.4%;" class="content">
+                <a href="./gallery.html" class="button-55 view-more">
+                    <img src="./img/plant-texture.png" alt="">
+                    View More <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div style="border-radius: 40px 0px;">
+                <img src="./img/mini-gallery/8.png" alt="">
+            </div>
+            <div style="border-radius: 0px 40px;">
+                <img src="./img/mini-gallery/9.png" alt="">
+            </div>
+        </div>
+        <div>
+            <div style="border-radius: 40px 0px;">
+                <img src="./img/mini-gallery/10.png" alt="">
+            </div>
+            <div style="border-radius: 0px 40px;">
+                <img src="./img/mini-gallery/11.png" alt="">
+            </div>
+            <div style="border-radius: 40px 0px;">
+                <img src="./img/mini-gallery/12.png" alt="">
+            </div>
+            <div style="border-radius: 40px 0px;">
+                <img src="./img/mini-gallery/13.png" alt="">
+            </div>
+            <div style="border-radius: 40px 0px;width: 29.4%;">
+                <img src="./img/mini-gallery/14.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Mini Gallery End -->
+    <!-- Mini Gallery Mobile Start -->
+    <div class="mini-gallery2">
+        <div>
+            <div style="border-radius: 20px 0px;height:29.4%;">
+                <img src="./img/mini-gallery/1.png" alt="">
+            </div>
+            <div style="border-radius: 0px 20px;">
+                <img src="./img/mini-gallery/2.png" alt="">
+            </div>
+            <div style="border-radius: 0px 20px;">
+                <img src="./img/mini-gallery/3.png" alt="">
+            </div>
+            <div style="border-radius: 0px 20px;">
+                <img src="./img/mini-gallery/4.png" alt="">
+            </div>
+            <div style="border-radius: 20px 20px 20px 0px;">
+                <img src="./img/mini-gallery/5.png" alt="">
+            </div>
+        </div>
+        <div>
+            <div style="border-radius: 0px 20px;">
+                <img src="./img/mini-gallery/6.png" alt="">
+            </div>
+            <div style="border-radius: 20px 0px;">
+                <img src="./img/mini-gallery/7.png" alt="">
+            </div>
+            <div style="width: 100%;" class="content">
+                <a href="./gallery.html" class="button-55 view-more">
+                    View More <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div style="border-radius: 20px 0px;">
+                <img src="./img/mini-gallery/8.png" alt="">
+            </div>
+            <div style="border-radius: 0px 20px;">
+                <img src="./img/mini-gallery/9.png" alt="">
+            </div>
+        </div>
+        <div>
+            <div style="border-radius: 20px 0px;">
+                <img src="./img/mini-gallery/10.png" alt="">
+            </div>
+            <div style="border-radius: 0px 20px;">
+                <img src="./img/mini-gallery/11.png" alt="">
+            </div>
+            <div style="border-radius: 20px 0px;">
+                <img src="./img/mini-gallery/12.png" alt="">
+            </div>
+            <div style="border-radius: 20px 0px;">
+                <img src="./img/mini-gallery/13.png" alt="">
+            </div>
+            <div style="border-radius: 20px 0px;height: 29.4%;">
+                <img src="./img/mini-gallery/14.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Mini Gallery End -->
+
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer-bg-dark text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">Our Office</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>
+                        <a class="text-light" target="_blank" href="https://maps.app.goo.gl/wDtJ7MTyEu1dKpHW7?g_st=ic">Dubai, UAE</a></p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a class="text-light" href="tel:+971586486800">+971 58 648 6800</a></p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i><a class="text-light" href="mailto:hola@planteuae.com" style="text-decoration: none;">hola@planteuae.com</a></p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href="https://www.instagram.com/reel/CwxWDNxJK91/?igshid=MzRlODBiNWFlZA=="><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href="https://www.facebook.com/planteuae?mibextid=LQQJ4d"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">Services</h4>
+                    <a class="btn btn-link" href="">Landscaping</a>
+                    <a class="btn btn-link" href="">Pruning plants</a>
+                    <a class="btn btn-link" href="">Urban Gardening</a>
+                    <a class="btn btn-link" href="">Garden Maintenance</a>
+                    <a class="btn btn-link" href="">Green Technology</a>
+                </div> -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="./about.html">About Us</a>
+                    <a class="btn btn-link" href="./gallery.html">Gallery</a>
+                    <a class="btn btn-link" href="./contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="#">Terms & Condition</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Plante</a>, All Right Reserved.
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a> -->
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Parrallax Javascript -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js'></script>
+    <script src="./js/parrallax.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <!-- <script src="/js/main.min.js"></script> -->
+    <!-- Swiper Javascript -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="./js/swiper.js"></script>
+    <script src="./js/whatwedo.js"></script>
+    <script id="messenger-widget-b" src="https://cdn.botpenguin.com/website-bot.js" defer>6542cbc53a66a377bb985425,6542b60cdde3d8070d884f1c</script>
+</body>
+
+</html>
