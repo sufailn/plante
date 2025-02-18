@@ -11,8 +11,8 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 const bannerItems = document.getElementById("swiper-content");
-const bannerImgs = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg"];
-const titles = ["Hardscaping", "Landscaping", "Irrigation","Moss Wall","Terrarium","Indoor Plants","Hardscaping", "Landscaping", "Irrigation"]; // Titles for first three images
+const bannerImgs = ["hardscaping1.jpg", "landscape.jpg", "irrigation1.jpg", "mosswall.jpg", "terrarium.jpg", "indoorplants.jpg"];
+const titles = ["Hardscaping", "Landscaping", "Irrigation","Moss Wall","Terrarium","Indoor Plants"]; // Titles for first three images
 
 const htmlString = bannerImgs
   .map((item, index) => {
