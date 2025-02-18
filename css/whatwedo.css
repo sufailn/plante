@@ -52,7 +52,7 @@
     border: 1px solid white;
     padding:1.5rem;
     border-radius: 0 15px;
-    max-width: 50%;
+    max-width: 100%;
     min-height: 140px;
     background-color: #fff;
     background-image: linear-gradient(#348e3800, #348e3800);
